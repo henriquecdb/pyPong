@@ -8,6 +8,7 @@ BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
+RED = (255, 0, 0)
 
 
 WIDTH, HEIGHT = 900, 600
@@ -107,9 +108,9 @@ def draw_dashed_line(surface, color, start_pos, end_pos, width=1, dash_length=10
 
 def main():
     running = True
-
-    player1 = Striker(20, 0, 10, 100, 10, GREEN)
-    player2 = Striker(WIDTH - 30, 0, 10, 100, 10, GREEN)
+    # posx, posy, radius, speed, color
+    player1 = Striker(20, 0, 10, 100, 10, BLUE)
+    player2 = Striker(WIDTH - 30, 0, 10, 100, 10, RED)
     ball = Ball(WIDTH // 2, HEIGHT // 2, 7, 7, WHITE)
 
     listOfPlayers = [player1, player2]
